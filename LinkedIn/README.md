@@ -1,6 +1,6 @@
 # LinkedIn Posts
 
-Publish each post in your own words after you understand and test its example, then replace each placeholder with its URL.
+The complete drafts are available in [`POST_DRAFTS.md`](POST_DRAFTS.md). Review them, run the examples, and make sure you can explain every idea before publishing. Then replace each placeholder below with its published URL.
 
 ## 1. ref vs out
 
