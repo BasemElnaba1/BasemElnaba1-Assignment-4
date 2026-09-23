@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#061827"/><stop offset="1" stop-color="#0B2540"/></linearGradient>
+    <marker id="arr4" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 Z" fill="#FFC766"/></marker>
+    <marker id="arr4b" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 Z" fill="#58C8FF"/></marker>
+    <filter id="shadow4" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000" flood-opacity="0.24"/></filter>
+  </defs>
+  <rect width="1200" height="1200" fill="url(#bg4)"/>
+  <circle cx="1100" cy="90" r="190" fill="#FFC766" opacity="0.04"/>
+  <text x="70" y="72" fill="#8FB7D4" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" letter-spacing="3">C# INTERMEDIATE • 04/04</text>
+  <text x="70" y="160" fill="#F7FBFF" font-family="DejaVu Sans, sans-serif" font-size="65" font-weight="700">string vs StringBuilder</text>
+  <text x="70" y="215" fill="#AFC7D9" font-family="DejaVu Sans, sans-serif" font-size="29">Repeated appends reveal the difference.</text>
+
+  <rect x="70" y="275" width="510" height="600" rx="32" fill="#102D48" filter="url(#shadow4)"/>
+  <rect x="620" y="275" width="510" height="600" rx="32" fill="#102D48" filter="url(#shadow4)"/>
+  <rect x="110" y="315" width="165" height="62" rx="18" fill="#FFC766"/>
+  <text x="193" y="357" text-anchor="middle" fill="#402900" font-family="DejaVu Sans Mono, monospace" font-size="31" font-weight="700">string</text>
+  <text x="110" y="420" fill="#F7FBFF" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700">Immutable</text>
+  <text x="110" y="457" fill="#AFC7D9" font-family="DejaVu Sans, sans-serif" font-size="23">Every append creates another object.</text>
+
+  <rect x="125" y="515" width="110" height="62" rx="14" fill="#5A4824"/>
+  <text x="180" y="555" text-anchor="middle" fill="#FFF4D8" font-family="DejaVu Sans Mono, monospace" font-size="25">""</text>
+  <line x1="240" y1="546" x2="315" y2="546" stroke="#FFC766" stroke-width="4" marker-end="url(#arr4)"/>
+  <rect x="330" y="515" width="110" height="62" rx="14" fill="#5A4824"/>
+  <text x="385" y="555" text-anchor="middle" fill="#FFF4D8" font-family="DejaVu Sans Mono, monospace" font-size="25">"A"</text>
+  <path d="M385 580 L385 625" stroke="#FFC766" stroke-width="4" marker-end="url(#arr4)"/>
+  <rect x="330" y="640" width="110" height="62" rx="14" fill="#5A4824"/>
+  <text x="385" y="680" text-anchor="middle" fill="#FFF4D8" font-family="DejaVu Sans Mono, monospace" font-size="25">"AB"</text>
+  <path d="M385 705 L385 750" stroke="#FFC766" stroke-width="4" marker-end="url(#arr4)"/>
+  <rect x="330" y="765" width="135" height="62" rx="14" fill="#FFC766"/>
+  <text x="398" y="805" text-anchor="middle" fill="#402900" font-family="DejaVu Sans Mono, monospace" font-size="25">"ABC"</text>
+  <text x="130" y="660" fill="#C8AD79" font-family="DejaVu Sans, sans-serif" font-size="21">old objects</text>
+  <line x1="125" y1="675" x2="275" y2="675" stroke="#C8AD79" stroke-width="3" stroke-dasharray="8 8"/>
+  <text x="110" y="845" fill="#FFC766" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="700">More copies as the result grows</text>
+
+  <rect x="660" y="315" width="285" height="62" rx="18" fill="#58C8FF"/>
+  <text x="803" y="357" text-anchor="middle" fill="#05223A" font-family="DejaVu Sans Mono, monospace" font-size="30" font-weight="700">StringBuilder</text>
+  <text x="660" y="420" fill="#F7FBFF" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700">Growable buffer</text>
+  <text x="660" y="457" fill="#AFC7D9" font-family="DejaVu Sans, sans-serif" font-size="23">Append into reusable storage.</text>
+
+  <text x="660" y="525" fill="#8FB7D4" font-family="DejaVu Sans, sans-serif" font-size="20">ONE BUFFER</text>
+  <rect x="660" y="550" width="86" height="82" rx="12" fill="#58C8FF"/>
+  <rect x="758" y="550" width="86" height="82" rx="12" fill="#58C8FF"/>
+  <rect x="856" y="550" width="86" height="82" rx="12" fill="#58C8FF"/>
+  <rect x="954" y="550" width="86" height="82" rx="12" fill="#173C5B" stroke="#3C6684" stroke-width="2"/>
+  <text x="703" y="603" text-anchor="middle" fill="#05223A" font-family="DejaVu Sans Mono, monospace" font-size="32" font-weight="700">A</text>
+  <text x="801" y="603" text-anchor="middle" fill="#05223A" font-family="DejaVu Sans Mono, monospace" font-size="32" font-weight="700">B</text>
+  <text x="899" y="603" text-anchor="middle" fill="#05223A" font-family="DejaVu Sans Mono, monospace" font-size="32" font-weight="700">C</text>
+  <text x="997" y="603" text-anchor="middle" fill="#8FB7D4" font-family="DejaVu Sans Mono, monospace" font-size="26">…</text>
+
+  <rect x="700" y="690" width="300" height="80" rx="20" fill="#092137"/>
+  <text x="850" y="723" text-anchor="middle" fill="#8FB7D4" font-family="DejaVu Sans, sans-serif" font-size="20">FINAL STEP</text>
+  <text x="850" y="755" text-anchor="middle" fill="#58C8FF" font-family="DejaVu Sans Mono, monospace" font-size="24">builder.ToString()</text>
+  <line x1="850" y1="640" x2="850" y2="675" stroke="#58C8FF" stroke-width="4" marker-end="url(#arr4b)"/>
+  <text x="660" y="845" fill="#58C8FF" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="700">Fewer repeated full-text copies</text>
+
+  <rect x="70" y="920" width="1060" height="165" rx="28" fill="#102D48"/>
+  <text x="110" y="968" fill="#8FB7D4" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700">BENCHMARKDOTNET EXPERIMENT</text>
+  <text x="110" y="1012" fill="#F7FBFF" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700">100  →  1,000  →  10,000  →  100,000 appends</text>
+  <text x="110" y="1052" fill="#AFC7D9" font-family="DejaVu Sans, sans-serif" font-size="23">Compare Mean time + Allocated memory using your own results.</text>
+
+  <text x="70" y="1132" fill="#F7FBFF" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="700">Small &amp; fixed: string</text>
+  <text x="390" y="1132" fill="#5F88A5" font-family="DejaVu Sans, sans-serif" font-size="23">•</text>
+  <text x="430" y="1132" fill="#F7FBFF" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="700">Repeated appends: consider StringBuilder</text>
+  <text x="70" y="1172" fill="#5F88A5" font-family="DejaVu Sans, sans-serif" font-size="20">ACADEMY SCHEDULE ANALYZER • BASEM ELNABA</text>
+</svg>

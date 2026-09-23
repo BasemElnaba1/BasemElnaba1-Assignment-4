@@ -4,6 +4,10 @@ Review these drafts, run every example yourself, and adjust the wording so you c
 
 ## Post 1 — `ref` vs `out` in C#
 
+![ref vs out diagram](images/01-ref-vs-out.png)
+
+Suggested LinkedIn alt text: A side-by-side comparison showing that `ref` updates an initialized value while `out` requires the method to produce a value.
+
 Today I learned that `ref` and `out` both allow a C# method to change a caller's variable, but they are used for different situations.
 
 - A variable passed with `ref` must already have a value before the method call. The method can read it and change it, but it is not required to assign a new value.
@@ -42,6 +46,10 @@ My simple rule is: use `ref` when a value already exists and should be updated; 
 ---
 
 ## Post 2 — `ref` with Reference Types
+
+![Reference types with and without ref](images/02-ref-reference-types.png)
+
+Suggested LinkedIn alt text: A C# reference diagram showing how a normal array parameter can mutate one shared object, while a `ref` parameter can replace the caller's array reference.
 
 One C# detail that confused me at first was the difference between passing an array normally and passing it with `ref`.
 
@@ -92,6 +100,10 @@ In a schedule application, I can update a session name inside the existing array
 
 ## Post 3 — The `params` Keyword in C#
 
+![params keyword diagram](images/03-params-keyword.png)
+
+Suggested LinkedIn alt text: A pipeline showing several integer arguments being packed into an `int[]` params parameter and totaled by one method.
+
 The `params` keyword lets one C# method accept a variable number of arguments.
 
 Instead of creating several overloads for two, three, or five session durations, I can write one method:
@@ -125,6 +137,10 @@ One important rule: a method can have only one `params` parameter, and it must b
 ---
 
 ## Post 4 — `string` vs `StringBuilder` in C#
+
+![string vs StringBuilder diagram](images/04-string-vs-stringbuilder.png)
+
+Suggested LinkedIn alt text: A comparison of immutable string concatenation creating new objects and StringBuilder appending into one growable buffer.
 
 While building my Academy Schedule Analyzer, I compared normal string concatenation with `StringBuilder` using BenchmarkDotNet.
 
